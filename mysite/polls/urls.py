@@ -2,6 +2,8 @@ from django.urls import path  # Del paquete django, módulo urls, importa la fun
 
 from . import views  # Desde este mismo directorio importa el módulo views
 
+app_name = "polls"
+
 urlpatterns = [
     path("", views.index, name="index"),
     path("<int:question_id>/", views.detail, name="detail"),
